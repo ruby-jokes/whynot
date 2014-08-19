@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-require 'whynot'
+`require 'whynot'`
 
 Then you can become less confident about your code working. Whynot adds
 `Kernel#maybe`, which takes a block, like so:
