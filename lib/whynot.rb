@@ -21,4 +21,10 @@ module Kernel
       yield
     end
   end
+
+  ##
+  # For when we really don't care
+  def meh
+    rand(2) == 1 ? true : false
+  end
 end

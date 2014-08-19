@@ -6,8 +6,8 @@ require 'whynot/version'
 Gem::Specification.new do |spec|
   spec.name          = "whynot"
   spec.version       = Whynot::VERSION
-  spec.authors       = ["Jason Lewis"]
-  spec.email         = ["jason@decomplecting.org"]
+  spec.authors       = ["Jason Lewis", "Micah Gates"]
+  spec.email         = ["jason@decomplecting.org", "micah@mgates.com"]
   spec.summary       = %q{Monkey patches Kernel. For lulz. And for _why day!}
   spec.description   = %q{Right now, it just adds Kernel#maybe which takes a block, and executes it. Or not.}
   spec.homepage      = "https://github.com/ruby-jokes/whynot"

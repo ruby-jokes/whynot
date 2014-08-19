@@ -22,6 +22,8 @@ Or install it yourself as:
 
 `require 'whynot'`
 
+#### Unconfident Code
+
 Then you can become less confident about your code working. Whynot adds
 `Kernel#maybe`, which takes a block, like so:
 
@@ -35,8 +37,14 @@ end
 Sometimes it'll return 3, and sometimes `nil`. Because, why not?
 
 If you would like your code to mostly or occasionally work, you use
-`Kernel#mostly` and `Kernel#occasionally`, respectivly.
+`Kernel#mostly` and `Kernel#occasionally`, respectively.
 
+#### Apathetic Code
+
+Whynot also defines `Kernel#meh`, for when you really don't give a shit.
+
+Sometimes it'll be `true`, sometimes `false`. But you don't care about that,
+do you?
 
 ## Contributing
 
