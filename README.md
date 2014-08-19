@@ -1,6 +1,8 @@
+[![Gem Version](https://badge.fury.io/rb/whynot.svg)](http://badge.fury.io/rb/whynot)
+
 # Whynot
 
-TODO: Write a gem description
+Why not?
 
 ## Installation
 
@@ -18,7 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+require 'whynot'
+
+Then you can become less confident about your code working. Whynot adds
+`Kernel#maybe`, which takes a block, like so:
+
+```ruby
+maybe do |x,y|
+  x,y = 1,2
+  x+y
+end
+```
+
+Sometimes it'll return 3, and sometimes `nil`. Because, why not?
 
 ## Contributing
 
