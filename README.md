@@ -34,6 +34,10 @@ end
 
 Sometimes it'll return 3, and sometimes `nil`. Because, why not?
 
+If you would like your code to mostly or occasionally work, you use
+`Kernel#mostly` and `Kernel#occasionally`, respectivly.
+
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/whynot/fork )
