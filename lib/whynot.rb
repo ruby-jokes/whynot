@@ -10,4 +10,15 @@ module Kernel
       yield
     end
   end
+
+  def mostly(&block)
+    unless rand(3) == 1
+      yield
+    end
+  end
+  def occasionally(&block)
+    if rand(5) == 1
+      yield
+    end
+  end
 end
