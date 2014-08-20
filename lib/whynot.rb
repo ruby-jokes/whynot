@@ -5,26 +5,46 @@ module Whynot
 end
 
 module Kernel
-  def maybe(&block)
-    if rand(2) == 1
-      yield
+  def maybe
+    if block_given? then
+      whynot(2, true, nil) { yield }
+    else
+      whynot(2)
     end
   end
 
-  def mostly(&block)
-    unless rand(3) == 1
-      yield
+  def mostly
+    if block_given? then
+      whynot(3, true, nil) { yield }
+    else
+      whynot(3)
     end
   end
-  def occasionally(&block)
-    if rand(5) == 1
-      yield
+
+  def occasionally
+    if block_given? then
+      whynot(5, true, nil) { yield }
+    else
+      whynot(5)
     end
   end
 
   ##
   # For when we really don't care
   def meh
-    rand(2) == 1 ? true : false
+    if block_given? then
+      whynot(2) { yield }
+    else
+      whynot(2)
+    end
+  end
+
+  private
+  def whynot(chances, yes = true, no = false)
+    if rand(chances) == 1 then
+      block_given? ? yield : yes
+    else
+      no
+    end
   end
 end
