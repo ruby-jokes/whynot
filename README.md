@@ -1,6 +1,6 @@
 [![Gem Version](https://badge.fury.io/rb/whynot.svg)](http://badge.fury.io/rb/whynot)
 
-# Whynot
+# whynot
 
 Why not?
 
