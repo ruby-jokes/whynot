@@ -27,4 +27,17 @@ module Kernel
   def meh
     rand(2) == 1 ? true : false
   end
+
+  ##
+  # For documentation, see https://www.youtube.com/watch?v=bgCJPdsBWnA
+  ##
+  def fukkit(default=nil, &block)
+    return default if ENV['RUBY_ENV'] != "production"
+    begin
+      yield
+    rescue
+      default
+    end
+  end
+
 end

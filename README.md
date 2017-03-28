@@ -46,6 +46,23 @@ Whynot also defines `Kernel#meh`, for when you really don't give a shit.
 Sometimes it'll be `true`, sometimes `false`. But you don't care about that,
 do you?
 
+#### Production-Only Code
+
+Whynot also defines 'Kernel#fukkit' for when you just want [to do it live](https://www.youtube.com/watch?v=bgCJPdsBWnA).
+The code will only be executed if `RUBY_ENV` is equal to `production`; otherwise, the default value will be returned.
+
+```ruby
+fukkit do  # Default handling; returns nil outside of production
+  # This block is executed in production, and its return value is returned
+end
+```
+
+```ruby
+fukkit(42) do # Default handling; returns 42 outside of production
+  # This block is executed in production, and its return value is returned
+end
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/whynot/fork )
